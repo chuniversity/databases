@@ -12,10 +12,10 @@ CREATE TABLE users (
 CREATE TABLE messages (
        message_id INT AUTO_INCREMENT PRIMARY KEY,
        the_text VARCHAR(20),
-       the_user_id INT,
+       the_message_user_id INT,
        created_at TIMESTAMP,
        roomname VARCHAR(20),
-       FOREIGN KEY(the_user_id) REFERENCES users(the_user_id)
+       FOREIGN KEY(the_message_user_id) REFERENCES users(the_user_id)
 );
 
 /* Create other tables and define schemas for them here! */
